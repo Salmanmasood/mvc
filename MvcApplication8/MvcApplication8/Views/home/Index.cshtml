@@ -1,0 +1,17 @@
+﻿@model List<MvcApplication8.Models.blog>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li><a href="@item.link">@item.name</a></li>
+        
+    }
+        
+</ul>

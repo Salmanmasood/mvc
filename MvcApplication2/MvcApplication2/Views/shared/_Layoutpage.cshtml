@@ -1,0 +1,137 @@
+﻿<html>
+
+<head>
+    <link rel="shortcut icon" href="img/icon.ICO" type="image/x-icon" />
+
+    <title>Asp Application MVC</title>
+    <style>
+      body
+{
+margin:0;
+padding:0px;
+background-color:#CCC;	
+}
+#wrapper
+{
+margin:0 auto;
+width:80%;
+background-color:#FFF;
+height:auto;	
+
+}
+header
+{
+width:100%;
+background-color:#096;
+height:200px;	
+	
+}
+
+nav
+{
+width:100%;
+background-color:#900;
+height:50px;	
+
+}
+nav ul
+{
+margin:0;	
+
+
+}
+
+nav ul li
+{
+	list-style-type:none;
+	float:left;
+	margin-top:10px;
+    
+}
+
+nav ul li a
+{
+	text-decoration:none;
+	margin-left:20px;
+	color:#FFF;
+	font-size:20px;}
+	
+nav ul li a:hover
+{
+color:#F00;
+}	
+
+nav ul li a:visited
+{
+color:#C39;
+}	
+
+
+
+#contentofbody
+{
+width:100%;
+background-color:#09F;
+height:1000px;	
+	
+	
+}
+
+h2
+{
+    margin:0px;
+    padding:0px;
+}
+footer
+{
+width:100%;
+background-color:#333;
+height:200px;	
+	
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+
+        </header>
+
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Contact Us", "contact", "Home")</li>
+                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+
+
+            </ul>
+
+        </nav>
+
+        <div id="contentofbody">
+
+
+            @RenderBody()
+
+        </div>
+
+
+        <div id="footer">
+            <footer>
+
+                <p>All right Reserved</p>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>

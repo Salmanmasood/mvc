@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<ul>
+
+    @foreach (var item in TempData["data"] as List <MvcApplication9.Models.employees>)
+    {
+        
+        <li>id=@item.id</li>
+        <li>name=@item.name</li>
+        <li>salary=@item.salary</li>
+    }
+
+</ul>

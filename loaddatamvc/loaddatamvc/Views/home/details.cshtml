@@ -1,0 +1,18 @@
+﻿@model loaddatamvc.Models.employees
+@{
+    ViewBag.Title = "details";
+}
+
+<h2>details</h2>
+
+
+
+<p>@Html.DisplayNameFor(d=>d.emp_id):
+    @Html.DisplayTextFor(d => d.emp_id)</p>
+
+<p>@Html.DisplayNameFor(d => d.emp_name):
+    @Html.DisplayTextFor(d => d.emp_name)</p>
+
+
+<p>@Html.DisplayNameFor(d => d.emp_email)
+    :@Html.DisplayTextFor(d => d.emp_email)</p>

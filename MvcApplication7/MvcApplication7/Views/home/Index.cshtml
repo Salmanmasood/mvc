@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<p>@ViewData["name"]</p>
+
+<table border="1">
+    
+    <tr><td>TECHNOLOGIES</td></tr>
+    @foreach (var s in ViewData["TECHNAME"] as System.Array)
+    {
+        <tr><td>@s</td></tr>
+    } 
+
+
+</table>
+
+<table border="1">
+
+    <tr><td>id</td> <td>Name</td> <td>Salary</td></tr>
+    
+    @foreach (var s in ViewData["DATA"] as List<MvcApplication7.Models.student>)
+    {
+        <tr><td>@s.id</td> <td>@s.name</td> <td>@s.salary</td></tr>
+
+    }
+
+
+</table>
+

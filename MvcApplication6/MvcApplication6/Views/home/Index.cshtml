@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Viewbag</h2>
+
+<p>
+Name: @ViewBag.name;
+</p>
+<p>
+    Salary: $@ViewBag.salary;
+</p>
+
+
+<ul>
+@foreach (var item in ViewBag.tech as System.Array)
+{
+    <li>@item</li>
+    
+    
+}
+
+</ul>
+
+@{
+    
+var s=(MvcApplication6.Models.student)ViewBag.salman;    
+
+}
+
+<p>id= @s.id</p>
+<p>name=@s.name</p>
+<p>Salary=@s.salary</p>
+<h1> From here list work starts.................</h1>
+
+
+<table border="1">
+    <tr><td>Id</td> <td>Name</td> <td>Salary</td></tr>
+
+    @foreach (var t in ViewBag.lists as List<MvcApplication6.Models.student>)
+    {
+        <tr><td>@t.id</td> <td>@t.name</td> <td>@t.salary</td></tr>
+
+
+    }
+
+</table>

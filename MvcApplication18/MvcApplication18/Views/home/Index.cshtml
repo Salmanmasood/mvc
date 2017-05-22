@@ -1,0 +1,29 @@
+﻿
+@model MvcApplication18.Models.employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+
+    <table>
+
+        <tr>   <td>Name: </td>   <td>@Html.TextBoxFor(x => x.name) </td> <td>@Html.ValidationMessageFor(x => x.name) </td></tr>
+
+        <tr>   <td>Email: </td>   <td>@Html.TextBoxFor(x => x.email) </td> <td>@Html.ValidationMessageFor(x => x.email) </td></tr>
+
+        <tr>   <td>Age: </td>   <td>@Html.TextBoxFor(x => x.age) </td> <td>@Html.ValidationMessageFor(x => x.age) </td></tr>
+
+        <tr>   <td>Date: </td>   <td>@Html.TextBoxFor(x => x.date) </td> <td>@Html.ValidationMessageFor(x => x.date) </td></tr>
+
+
+        <tr>   <td></td>   <td> <input type="submit" value="submit" /> </td></tr>
+        @ViewBag.RowAlertMessage
+    </table>
+    <p>@Html.ValidationSummary()</p>
+
+}

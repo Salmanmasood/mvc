@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>html dropdown list</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr> <td>name:</td> <td>@Html.TextBox("txtname")</td> </tr>
+        <tr> <td>Password</td> <td>@Html.TextBox("txtpassword")</td> </tr>
+        <tr> <td>city:</td> <td>@Html.DropDownList("ddlcity",(IEnumerable<SelectListItem>) ViewBag.city,"select a city")</td> </tr>
+
+    </table>
+    
+
+}

@@ -1,0 +1,24 @@
+﻿@model MvcApplication20.Models.registeration
+@{
+    ViewBag.Title = "registrationpage";
+}
+
+<h2>registration Page</h2>
+
+@using (Html.BeginForm())
+{
+    
+    <p><b>Name:</b> @Html.TextAreaFor(x=>x.name)</p>
+    <p><b>Email:</b> @Html.TextAreaFor(x => x.email)</p>
+    <p><b>Phone:</b> @Html.TextAreaFor(x => x.phone)</p>
+    <p><b>Message:</b> @Html.TextAreaFor(x => x.message)</p>
+
+    <input type="submit"  value="submit!"/>
+
+
+
+
+
+}
+
+<p>@Html.ValidationSummary()</p>

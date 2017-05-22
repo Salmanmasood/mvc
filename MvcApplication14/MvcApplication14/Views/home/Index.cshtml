@@ -1,0 +1,20 @@
+﻿@model MvcApplication14.Models.maths
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Strongly Type html helpers</h2>
+
+
+@using(Html.BeginForm())
+{
+    
+    <table>
+        <tr><td>1st number</td> <td>@Html.TextAreaFor(x=>x.x)</td></tr>
+        <tr><td>2nd Number</td> <td>@Html.TextAreaFor(y => y.y)</td></tr>
+        <tr><td></td> <td><input type="submit"  value="add"/></td></tr>
+        <tr><td>Result</td> <td>@ViewBag.result</td></tr>
+
+    </table>
+    
+}

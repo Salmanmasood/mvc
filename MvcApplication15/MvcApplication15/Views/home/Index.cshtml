@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Html Validation</h2>
+
+
+@using(Html.BeginForm())
+{
+    
+   <table>
+       <tr><td>Name</td> <td>@Html.TextBox("name") </td> <td>@*@Html.ValidationMessage("name")*@ @ViewBag.nameerror</td></tr>
+       <tr><td>Email</td> <td>@Html.TextBox("Email")</td><td>@Html.ValidationMessage("Email") </td> </tr>
+       <tr><td>Date Of Birth</td> <td>@Html.TextBox("DOB")</td><td>@Html.ValidationMessage("DOB") </td></tr>
+       <tr><td></td> <td><input type="submit"  value="Save"/></td></tr>
+       <tr><td></td> <td>@Html.Raw(ViewBag.aletmessage)</td></tr>
+
+
+   </table> 
+    
+    
+    
+}
+
+@Html.ValidationSummary()

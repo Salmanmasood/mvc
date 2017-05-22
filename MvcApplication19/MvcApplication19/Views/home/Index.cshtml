@@ -1,0 +1,44 @@
+﻿ @model MvcApplication19.Models.Student
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{
+
+if (ViewData["name"]==null)
+	  {
+       
+    
+    using (Html.BeginForm())
+        {
+         
+        <table>
+            <tr><td>Name</td> <td>@Html.TextAreaFor(x=>x.name) </td></tr>
+
+            <tr><td></td><td><input type="submit" value="signup" /></td> </tr>
+        </table>
+
+        <p>@Html.ValidationSummary()</p>
+
+    
+        }
+
+
+
+            }
+
+else
+{
+    <p>@ViewData["name"] Is Online!!!</p>
+}
+
+
+
+
+
+
+
+}  

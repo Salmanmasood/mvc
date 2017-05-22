@@ -1,0 +1,24 @@
+﻿@model System.Array
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p> welcome to my program current time is @DateTime.Now </p>
+
+
+<p>All rights Reserved &copy; By salman masood</p>
+
+
+<ol>
+    @foreach (var item in Model)
+    {
+        <li>
+            @item
+        </li>
+
+    }     
+   
+</ol>

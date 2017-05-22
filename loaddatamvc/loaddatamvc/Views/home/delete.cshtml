@@ -1,0 +1,26 @@
+﻿@model loaddatamvc.Models.employees
+@{
+    ViewBag.Title = "delete";
+}
+
+<h2>delete</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.DisplayNameFor(d => d.emp_id)
+        @Html.TextBoxFor(d => d.emp_id, new { @readonly = true })
+    </p>
+
+    <p>
+        @Html.DisplayNameFor(d => d.emp_name):
+        @Html.TextBoxFor(d => d.emp_name)
+    </p>
+
+
+    <p>
+        @Html.DisplayNameFor(d => d.emp_email)
+        :@Html.TextBoxFor(d => d.emp_email)
+    </p>
+
+    <input type="submit" value="delete!" />
+}
